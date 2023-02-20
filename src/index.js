@@ -1,19 +1,19 @@
-import _ from 'lodash';
 import './style.css';
 
 const toDos = [{
-  description : 'Fix car',
+  description: 'Fix car',
   completed: false,
   index: 1,
-},{
-description : 'Finish milestone 1',
-completed: false,
-index: 2,
+}, {
+  description: 'Finish milestone 1',
+  completed: false,
+  index: 2,
 },
-{ description : 'Take out the trash',
-completed: false,
-index: 3,
-}]
+{
+  description: 'Take out the trash',
+  completed: false,
+  index: 3,
+}];
 
 const list = document.querySelector('.todo');
 window.addEventListener('DOMContentLoaded', () => {
@@ -23,5 +23,5 @@ window.addEventListener('DOMContentLoaded', () => {
   <p>${task.description}</p>
 </div>
 <i class="fa-solid fa-ellipsis-vertical"></i> </li>`).join('');
-list.innerHTML = listString;
-})
+  list.innerHTML = listString;
+});

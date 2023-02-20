@@ -1,33 +1,33 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: "development",
-  entry: "./src/index.js",
+  mode: 'development',
+  entry: './src/index.js',
   output: {
-    filename: "[name].js",
-    path: path.resolve(__dirname, "dist"),
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
   devServer: {
-    static: "./dist",
+    static: './dist',
   },
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "To Do List",
+      title: 'To Do List',
       filename: 'index.html',
       template: 'src/index.html',
     }),
   ],
   optimization: {
-    runtimeChunk: "single",
+    runtimeChunk: 'single',
   },
 };
