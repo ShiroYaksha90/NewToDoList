@@ -22,7 +22,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Output Management",
+      title: "To Do List",
+      filename: 'index.html',
+      template: 'src/index.html',
     }),
   ],
   optimization: {
