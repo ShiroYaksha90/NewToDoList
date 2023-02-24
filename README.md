@@ -13,6 +13,7 @@ Milestone 3: I will add some functionality to the application to make it interac
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
     <!-- - [Key Features](#key-features) -->
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
@@ -23,7 +24,7 @@ Milestone 3: I will add some functionality to the application to make it interac
     <!-- - [Run tests](#run-tests) -->
     <!-- - [Deployment](#triangular_flag_on_post-deployment) -->
 - [👥 Authors](#authors)
-<!-- - [🔭 Future Features](#future-features) -->
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
   <!-- - [🙏 Acknowledgements](#acknowledgements) -->
@@ -42,6 +43,14 @@ Milestone 3: I will add some functionality to the application to make it interac
 - HTML
 - CSS
 - Javascript
+
+  ### Key Features <a name="key-features"></a>
+
+- **Built with Webpack development environment**
+- **Basic Todo operations ;**
+  - Add task
+  - Remove task
+  - Edit task
 
 <!-- LIVE DEMO -->
 
@@ -84,7 +93,11 @@ To get a local copy up and running follow these simple example steps:
 - Twitter: [@Basim Aljazaeri](https://twitter.com/Basim_AlJazaeri)
 - LinkedIn: [Basim Aljazaeri](https://www.linkedin.com/in/basim-aljazaeri-603682201/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+  
+## 🔭 Future Features <a name="future-features"></a>
+  
+- Clear completed tasks
+- Intractive list
 
 ## 🤝 Contributing <a name="contributing"></a>
 
