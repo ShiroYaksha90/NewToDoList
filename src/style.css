@@ -97,3 +97,17 @@ i {
 button:hover {
   cursor: pointer;
 }
+
+
+#inparrow {
+  rotate: 90deg;
+  font-size: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.edit-input {
+  border: 2px solid red;
+}
