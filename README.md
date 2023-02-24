@@ -95,7 +95,9 @@ To get a local copy up and running follow these simple example steps:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
 ## 🔭 Future Features <a name="future-features"></a>
-
+- Clear all completed tasks
+- Implement an intractive list
+  
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
