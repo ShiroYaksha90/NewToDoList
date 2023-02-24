@@ -1,36 +1,36 @@
-
-let editLocalStorage = (editInput,index) => {
-    let taskList = localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : [];
-taskList.map((task) => {
-    if(task.index == index) {
-        task.desc=editInput
+const editLocalStorage = (editInput, index) => {
+  const taskList = localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : [];
+  taskList.map((task) => {
+    if (task.index === index) {
+      task.desc = editInput;
     }
-})
-localStorage.setItem('tasks', JSON.stringify(taskList))
-}
+    return task;
+  });
+  localStorage.setItem('tasks', JSON.stringify(taskList));
+};
 
 const removeFromLocalStorage = (index) => {
-    let taskList = localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : []; 
-    taskList = taskList.filter((task) => {
-        if (task.index !== index) {
-          return true;
-        }
-        return false;
-      });
-      localStorage.setItem('tasks', JSON.stringify(taskList));
-      window.location.reload();
-}
+  let taskList = localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : [];
+  taskList = taskList.filter((task) => {
+    if (task.index !== index) {
+      return true;
+    }
+    return false;
+  });
+  localStorage.setItem('tasks', JSON.stringify(taskList));
+  window.location.reload();
+};
 
 const resetIndex = () => {
-    let taskList = localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : []; 
-    const arr = [];
+  const taskList = localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : [];
+  const arr = [];
 
   taskList.forEach((obj) => {
-    const newObj = { ...obj, index: (arr.length + 1).toString()};
+    const newObj = { ...obj, index: (arr.length + 1).toString() };
     arr.push(newObj);
   });
   localStorage.setItem('tasks', JSON.stringify(arr));
   window.location.reload();
 };
 
-export { editLocalStorage, removeFromLocalStorage, resetIndex}
+export { editLocalStorage, removeFromLocalStorage, resetIndex };
