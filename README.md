@@ -57,7 +57,7 @@ Milestone 3: I will add some functionality to the application to make it interac
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo]()
+- [Live Demo](https://shiroyaksha90.github.io/NewToDoList/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
