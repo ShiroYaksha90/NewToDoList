@@ -10,20 +10,35 @@
 </head>
 <body>
     <section class="mainsection">
-        <form action="submit" class="form">
+        <form action="submit" class="form" data-new-list-form>
             <div class="header">
                 <h1>Today's To Do</h1>
                 <i id="spin" class="fa fa-refresh"></i>
             </div>
             <div class="dataInput">
-                <input id="todo-input"  type="text" placeholder="Add to your list..." >
-                <button type="submit" id="inpbtn"><i class="fas fa-long-arrow-alt-left"></i></button>
+                <input
+                    id="todo-input" 
+                    data-new-list-input
+                    type="text" 
+                    placeholder="Add to your list..."
+                    required
+                    >
+                <button type="submit" id="inpbtn"><i class="fa fa-arrow-turn-down" id="inparrow"></i></button>
             </div>
-            <ul class="todo"></ul>
+            <ul class="todo" data-list></ul>
         </form>
         <div class="clear">
             <button type="submit" class="clearbtn">Clear all completed</button>
         </div>
+        <template data-temp>
+            <li class="task">
+                <div class="item">
+                  <input type="checkbox">
+                  <p>${task.description}</p>
+                </div>
+                <i class="fa-solid fa-ellipsis-vertical"></i></li>
+                data-delet-task-button
+        </template>
     </section>
 </body>
 </html>
