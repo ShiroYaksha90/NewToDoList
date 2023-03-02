@@ -1,36 +1,37 @@
-const editLocalStorage = (editInput, index) => {
-  const taskList = localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : [];
-  taskList.map((task) => {
-    if (task.index === index) {
-      task.desc = editInput;
-    }
-    return task;
-  });
-  localStorage.setItem('tasks', JSON.stringify(taskList));
+const addToLocalStorage = (task, status, index) => {
+  const tasks = { task, status, index };
+
+  const tasksList = localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : [];
+  tasksList.push(tasks);
+  localStorage.setItem('tasks', JSON.stringify(tasksList));
 };
 
 const removeFromLocalStorage = (index) => {
-  let taskList = localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : [];
-  taskList = taskList.filter((task) => {
+  let tasksList = localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : [];
+
+  tasksList = tasksList.filter((task) => {
     if (task.index !== index) {
       return true;
     }
     return false;
   });
-  localStorage.setItem('tasks', JSON.stringify(taskList));
+
+  localStorage.setItem('tasks', JSON.stringify(tasksList));
   window.location.reload();
 };
 
-const resetIndex = () => {
-  const taskList = localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : [];
-  const arr = [];
-
-  taskList.forEach((obj) => {
-    const newObj = { ...obj, index: (arr.length + 1).toString() };
-    arr.push(newObj);
+const editLocalStorage = (editedtask, status, index) => {
+  let tasksList = localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : [];
+  tasksList = tasksList.map((item) => {
+    if (item.index === index) {
+      item.task = editedtask;
+      item.status = status;
+    }
+    return item;
   });
-  localStorage.setItem('tasks', JSON.stringify(arr));
-  window.location.reload();
+  localStorage.setItem('tasks', JSON.stringify(tasksList));
 };
 
-export { editLocalStorage, removeFromLocalStorage, resetIndex };
+export {
+  addToLocalStorage, removeFromLocalStorage, editLocalStorage,
+};
